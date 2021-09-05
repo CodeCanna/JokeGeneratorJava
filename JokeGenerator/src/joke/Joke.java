@@ -37,7 +37,7 @@ public class Joke extends JFrame {
 
 		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 
-//		System.out.println("Response Body: " + response.body());
+		// System.out.println("Response Body: " + response.body());
 		
 		// Return a random joke
 		return response.body();
