@@ -21,6 +21,7 @@ import java.awt.event.*;
  * to be displayed in a text field.
  *
  * This was written with the help of the Oracle javadocs.
+ *
  */
 public class Joke extends JFrame {
 	/*
@@ -81,7 +82,7 @@ public class Joke extends JFrame {
 				try {
 					String joke = getJoke();
 					jokeDisplay.setText(joke);
-					System.out.println(joke.length());
+//					System.out.println(joke.length());
 					// TODO: Add these to an array?  Perhaps write to file?
 				} catch (IOException | InterruptedException e) {
 					e.printStackTrace();
@@ -97,5 +98,8 @@ public class Joke extends JFrame {
 		mainWindow.setLayout(null);
 		mainWindow.setVisible(true);
 
+		BaddumTss thing = new BaddumTss();
+
+		thing.baddumTss();
 	}
 }
