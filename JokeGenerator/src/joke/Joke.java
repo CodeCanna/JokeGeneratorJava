@@ -6,8 +6,6 @@ import java.io.IOException;
 // Import HTTP stuff
 import java.net.URI;
 import java.net.http.*;
-import java.net.http.HttpRequest.BodyPublisher;
-import java.net.http.HttpResponse.BodyHandler;
 import java.net.http.HttpResponse.BodyHandlers;
 
 // Import UI stuff
@@ -18,12 +16,13 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
 
+/**
+ * This program pulls a random joke from icanhazdadjoke.com and parses it into the java UI class
+ * to be displayed in a text field.
+ *
+ * This was written with the help of the Oracle javadocs.
+ */
 public class Joke extends JFrame {
-	/**
-	 * Why do I need this?
-	 */
-	private static final long serialVersionUID = 1L;
-
 	/*
 	 * This function retrieves a joke from icanhazdadjoke.com
 	 */
@@ -58,7 +57,7 @@ public class Joke extends JFrame {
 		int buttonPosX = (windowWidth / 2) - (buttonWidth / 2);
 		int buttonPosY = 550;
 
-		// Initilize UI Classes
+		// Initialize UI Classes
 		JFrame mainWindow = new JFrame();
 		JButton newJokeBtn = new JButton("Tell me a joke!");
 		JTextField jokeDisplay = new JTextField();
